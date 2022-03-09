@@ -1,0 +1,24 @@
+﻿@using EntityLayer.Concrete
+@model List<User>
+
+@{
+    Layout = null;
+    var session = Session["UserName"];
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="timeline">
+        @foreach (var item in Model)
+        {
+            <a>Merhaba @item.UserName</a>
+        }
+    </div>
+</body>
+</html>

@@ -45,10 +45,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.8.1.0\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Primitives, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Primitives.4.3.0\lib\net45\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -121,6 +136,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ManagerController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\WorkerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -148,6 +168,73 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Template\Themes\HTML\css\bootstrap.min.css" />
+    <Content Include="Template\Themes\HTML\css\fonts.css" />
+    <Content Include="Template\Themes\HTML\css\main.css" />
+    <Content Include="Template\Themes\HTML\css\pluginsx.css" />
+    <Content Include="Template\Themes\HTML\css\style.css" />
+    <Content Include="Template\Themes\HTML\dist\css\swiper.css" />
+    <Content Include="Template\Themes\HTML\dist\css\swiper.min.css" />
+    <Content Include="Template\Themes\HTML\dist\js\swiper.esm.bundle.js" />
+    <Content Include="Template\Themes\HTML\dist\js\swiper.esm.js" />
+    <Content Include="Template\Themes\HTML\dist\js\swiper.js" />
+    <Content Include="Template\Themes\HTML\dist\js\swiper.min.js" />
+    <Content Include="Template\Themes\HTML\donate.html" />
+    <Content Include="Template\Themes\HTML\download.html" />
+    <Content Include="Template\Themes\HTML\faq\css\reset.css" />
+    <Content Include="Template\Themes\HTML\faq\css\style.css" />
+    <Content Include="Template\Themes\HTML\faq\index.html" />
+    <Content Include="Template\Themes\HTML\faq\js\jquery-2.1.1.js" />
+    <Content Include="Template\Themes\HTML\faq\js\jquery.mobile.custom.min.js" />
+    <Content Include="Template\Themes\HTML\faq\js\main.js" />
+    <Content Include="Template\Themes\HTML\faq\js\modernizr.js" />
+    <Content Include="Template\Themes\HTML\fonts\ProximaNova-Regular.svg" />
+    <Content Include="Template\Themes\HTML\fonts\ProximaNova-Semibold.svg" />
+    <Content Include="Template\Themes\HTML\how-start.html" />
+    <Content Include="Template\Themes\HTML\icons\bg-left.png" />
+    <Content Include="Template\Themes\HTML\icons\droped.png" />
+    <Content Include="Template\Themes\HTML\icons\dw.png" />
+    <Content Include="Template\Themes\HTML\icons\eye.png" />
+    <Content Include="Template\Themes\HTML\icons\fontawesome-all.min.css" />
+    <Content Include="Template\Themes\HTML\icons\fontawesome-webfont.svg" />
+    <Content Include="Template\Themes\HTML\icons\g.png" />
+    <Content Include="Template\Themes\HTML\icons\ic22.png" />
+    <Content Include="Template\Themes\HTML\icons\ic26.png" />
+    <Content Include="Template\Themes\HTML\icons\icomoon.css" />
+    <Content Include="Template\Themes\HTML\icons\icomoon.svg" />
+    <Content Include="Template\Themes\HTML\icons\img-ste1.png" />
+    <Content Include="Template\Themes\HTML\icons\info.png" />
+    <Content Include="Template\Themes\HTML\icons\loveb.png" />
+    <Content Include="Template\Themes\HTML\icons\loved.png" />
+    <Content Include="Template\Themes\HTML\icons\pt.png" />
+    <Content Include="Template\Themes\HTML\icons\video.png" />
+    <Content Include="Template\Themes\HTML\icons\vkr.png" />
+    <Content Include="Template\Themes\HTML\img\bg-left.png" />
+    <Content Include="Template\Themes\HTML\img\block-1s.png" />
+    <Content Include="Template\Themes\HTML\img\block-2s.png" />
+    <Content Include="Template\Themes\HTML\img\pattern.png" />
+    <Content Include="Template\Themes\HTML\img\post.png" />
+    <Content Include="Template\Themes\HTML\index.html" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\.gitignore" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\dist\circle-progress.js" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\dist\circle-progress.min.js" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\docs\examples.js" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\docs\index.html" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\docs\styles.css" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\karma-saucelabs.conf.js" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\karma.conf.js" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\tests\images\circle.png" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\tests\index.html" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\tests\tests.js" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\tests\test_utils.js" />
+    <Content Include="Template\Themes\HTML\js\circle-progress.js" />
+    <Content Include="Template\Themes\HTML\js\examples.js" />
+    <Content Include="Template\Themes\HTML\js\jquery.min.js" />
+    <Content Include="Template\Themes\HTML\js\main.js" />
+    <Content Include="Template\Themes\HTML\js\pluginsx.js" />
+    <Content Include="Template\Themes\HTML\js\vendor\jquery-3.2.1.min.js" />
+    <Content Include="Template\Themes\HTML\js\vendor\modernizr-3.5.0.min.js" />
+    <Content Include="Template\Themes\HTML\register.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -162,10 +249,42 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Login\UserLogin.cshtml" />
+    <Content Include="Template\Themes\HTML\dist\js\swiper.min.js.map" />
+    <Content Include="Template\Themes\HTML\faq\partials\_layout.scss" />
+    <Content Include="Template\Themes\HTML\faq\partials\_mixins.scss" />
+    <Content Include="Template\Themes\HTML\faq\partials\_variables.scss" />
+    <Content Include="Template\Themes\HTML\faq\README.md" />
+    <Content Include="Template\Themes\HTML\faq\scss\style.scss" />
+    <Content Include="Template\Themes\HTML\fonts\ProximaNova-Regular.otf" />
+    <Content Include="Template\Themes\HTML\fonts\ProximaNova-Regular.ttf" />
+    <Content Include="Template\Themes\HTML\fonts\ProximaNova-Regular.woff" />
+    <Content Include="Template\Themes\HTML\fonts\ProximaNova-Semibold.otf" />
+    <Content Include="Template\Themes\HTML\fonts\ProximaNova-Semibold.ttf" />
+    <Content Include="Template\Themes\HTML\fonts\ProximaNova-Semibold.woff" />
+    <Content Include="Template\Themes\HTML\icons\fontawesome-webfont.eot" />
+    <Content Include="Template\Themes\HTML\icons\fontawesome-webfont.ttf" />
+    <Content Include="Template\Themes\HTML\icons\fontawesome-webfont.woff" />
+    <Content Include="Template\Themes\HTML\icons\fontawesome-webfont.woff2" />
+    <Content Include="Template\Themes\HTML\icons\icomoon.eot" />
+    <Content Include="Template\Themes\HTML\icons\icomoon.ttf" />
+    <Content Include="Template\Themes\HTML\icons\icomoon.woff" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\.travis.yml" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\bower.json" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\jsdoc.conf" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\LICENSE" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\package.json" />
+    <Content Include="Template\Themes\HTML\jquery-circle-progress-1.2.2\README.md" />
+    <Content Include="Views\Login\ManagerLogin.cshtml" />
+    <Content Include="Views\Login\WorkerLogin.cshtml" />
+    <Content Include="Views\Register\UserRegister.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Manager\" />
+    <Folder Include="Views\Worker\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -179,6 +298,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{852415ea-d3b3-4426-890a-8f247edb8995}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{9973749f-d193-4d0a-badb-b36756a74fa4}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
+      <Project>{eca038db-3413-4b70-be6a-829cfae7bafa}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
