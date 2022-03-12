@@ -60,7 +60,6 @@
                                     Kullanıcı Adı
                                 </span>
                                 <input type="text" name="UserName" id="name" placeholder="Kullanıcı adınızı giriniz" />
-                                @Html.ValidationMessageFor(x => x.UserName)
                             </div>
                         </div>
 
@@ -73,8 +72,7 @@
                                 <span class="name-form">
                                     Mail
                                 </span>
-                                <input type="text" name="mail" id="mail" placeholder="Mail giriniz " />
-                                @*@Html.ValidationMessageFor(x => x.Mail)*@
+                                <input type="text" name="UserMail" id="mail" placeholder="Mail giriniz " />
                             </div>
                         </div>
 
@@ -87,28 +85,14 @@
                                 <span class="name-form">
                                     Şifre
                                 </span>
-                                <input type="password" name="password" id="password" placeholder="Şifrenizi oluşturunuz" />
-                                @*@Html.ValidationMessageFor(x => x.Password)*@
+                                <input type="password" name="UserPassword" id="password" placeholder="Şifrenizi oluşturunuz" />
                             </div>
                         </div>
 
-                        <div class="section-how">
-                            <span class="num-4">
-                                <i class="fa fa-key" aria-hidden="true"></i>
-                            </span>
-                            <div class="reved">
-                                <div class="arrow-road"></div>
-                                <span class="name-form">
-                                    Şifre Tekrar
-                                </span>
-                                <input type="password" name="password-repeat" id="password-repeat" placeholder="Şifrenizi tekrar giriniz" />
-                                @*@Html.ValidationMessageFor(x => x.Password)*@
-                            </div>
-                        </div>
                         <br />
-                        <br />
-                        <div class="down-reg">
-                            <button style="background-color:darkorange" class="btn btn-warning">Kayıt Ol</button>
+                        <div class="form-group">
+                            <br />
+                            <button style="background-color:cornflowerblue" type="button" onclick="location='/Register/UserRegister'" class="btn btn-warning">Kayıt Ol</button>
                         </div>
                     }
                 </div>
