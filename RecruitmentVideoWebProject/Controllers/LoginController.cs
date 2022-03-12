@@ -1,4 +1,6 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -11,6 +13,7 @@ namespace RecruitmentVideoWebProject.Controllers
 {
     public class LoginController : Controller
     {
+        LoginManager lm = new LoginManager(new EfUserDal());
         Context c = new Context();
         
         public ActionResult Index()
@@ -36,6 +39,7 @@ namespace RecruitmentVideoWebProject.Controllers
             }
             else
             {
+                ViewData["ErrorMessage"] = "Kullanıcı adı veya Parola yanlış";
                 return RedirectToAction("UserLogin");
             }
         }
@@ -58,6 +62,7 @@ namespace RecruitmentVideoWebProject.Controllers
             }
             else
             {
+                ViewData["ErrorMessage"] = "Kullanıcı adı veya Parola yanlış";
                 return RedirectToAction("ManagerLogin");
             }
         }
@@ -80,6 +85,7 @@ namespace RecruitmentVideoWebProject.Controllers
             }
             else
             {
+                ViewData["ErrorMessage"] = "Kullanıcı adı veya Parola yanlış";
                 return RedirectToAction("WorkerLogin");
             }
         }
