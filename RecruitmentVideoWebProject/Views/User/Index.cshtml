@@ -2,23 +2,19 @@
 @model List<User>
 
 @{
-    Layout = null;
-    var session = Session["UserName"];
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
 <body>
-    <div class="timeline">
+    <div class="jumbotron">
         @foreach (var item in Model)
         {
-            <a>Merhaba @item.UserName</a>
+            <div class="riglt-floats-xs">
+                <a>Hoş Geldin @item.UserName. İş Görüşmesinde Başarılar :)</a>
+            </div>
         }
     </div>
 </body>
-</html>
+
+
