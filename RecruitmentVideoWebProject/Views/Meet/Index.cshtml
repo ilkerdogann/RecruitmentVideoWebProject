@@ -1,0 +1,14 @@
+﻿<div id="meet"></div>
+<script src='https://meet.jit.si/external_api.js'></script>
+<script>
+    debugger;
+    const domain = 'meet.jit.si';
+    const options = {
+        roomName: 'Video Ilker Odası',
+        width: 1600,
+        height: 700,
+        parentNode: document.querySelector('#meet'),
+        lang: 'de'
+    };
+    const api = new JitsiMeetExternalAPI(domain, options);
+</script>
