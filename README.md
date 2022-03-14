@@ -11,10 +11,13 @@ Jitsi'nin projeye entegre edilmesi.
 
 ![12](https://user-images.githubusercontent.com/57717613/158244919-6ea59789-1286-42a2-90e7-9c1f825d5d98.PNG)
 
+Yönetici, Çalışan ve Kullanıcıların ana sayfalarında kullanılan tema.
 [Tema-1](https://adminlte.io/).
 
+Yönetici, Çalışan ve Kullanıcıların giriş - kayıt sayfalarında kullanılan tema.
 [Tema-2](https://www.free-css.com/free-css-templates/page269/minecraft-project)
 
+*Bunların haricinde bütün proje bana aittir.
 
 
 ### Uygulama Görselleri
